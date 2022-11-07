@@ -1,3 +1,131 @@
-h1 {
-  font-size: 3rem;
+:root{
+  --primary-color: #F09C3D;
+  --background-color: #111827;
+  --ease-function: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  color: #e5e7eb;
+  text-align: center;
+  font-family: 'Poppins', 'Noto Sans TC', 'Times New Roman', Times, serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+img {
+  width: 100%;
+  vertical-align: middle;
+}
+
+#app {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+.card {
+  background-color: var(--background-color);
+  width: 90%;
+  max-width: 350px;
+  margin: auto;
+  box-sizing: border-box;
+  padding: 2rem 2rem 0;
+  border-radius: 20px;
+}
+
+.card figure img {
+  border-radius: 50%;
+  object-fit: cover;
+}
+.card figure {
+  width: 130px;
+  height: 130px;
+  border: 3px solid var(--primary-color);
+  border-radius: 50%;
+  padding: 6px;
+  box-sizing: border-box;
+  margin: 0 auto .5rem;
+}
+
+.card h1 {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  line-height: 2;
+}
+
+.card h2 {
+  font-size: 1rem;
+}
+
+.card .social-group {
+  width: 90%;
+  margin: auto;
+  text-align: left;
+  background-color: var(--primary-color);
+  box-sizing: border-box;
+  padding: .5rem 1rem;
+  border-radius: 999rem;
+  position: relative;
+  bottom: -1.5rem;
+  overflow: hidden;
+}
+.card .social-group .btn {
+  background-color: var(--background-color);
+  border: none;
+  appearance: none;
+  color: var(--primary-color);
+  border-radius: 50%;
+  box-sizing: border-box;
+  padding: 2px;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
+.card .social-group .btn i {
+  rotate: 0 deg;
+  transition: rotate .3s var(--ease-function);
+}
+
+.card .social-group .rotate-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  padding:0 0 0 55px;
+  margin: auto;
+  height: 20px;
+  transform-origin: left;
+  transition: rotate .3s var(--ease-function);
+}
+.card .social-group .social-button {
+  rotate: -45deg;
+}
+.card .social-group .social-button {
+  color: var(--background-color);
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 10px;
+}
+.card .social-group .social-button a {
+  width: 35px;
+  height: 35px;
+  background-color: #ffffff77;
+  text-align: center;
+  border-radius: 50%;
+  color: var(--background-color);
+}
+.card .social-group .social-button a i {
+  line-height: 35px;
+  vertical-align: middle;
+}
+
+.card .show-link .social-button {
+  rotate: 0deg;
+}
+.card .show-link .description {
+  rotate: 80deg;
+}
+.card .show-link .btn i {
+  rotate: 80deg;
 }
