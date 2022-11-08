@@ -69,6 +69,7 @@ img {
   position: relative;
   bottom: -1.5rem;
   overflow: hidden;
+  transform-origin: left;
 }
 .card .social-group .btn {
   background-color: var(--background-color);
@@ -84,7 +85,7 @@ img {
 }
 .card .social-group .btn i {
   rotate: 0 deg;
-  transition: rotate .3s var(--ease-function);
+  transition: rotate .5s var(--ease-function);
 }
 
 .card .social-group .rotate-line {
@@ -95,7 +96,7 @@ img {
   margin: auto;
   height: 20px;
   transform-origin: left;
-  transition: rotate .3s var(--ease-function);
+  transition: rotate .5s var(--ease-function);
 }
 .card .social-group .social-button {
   rotate: -45deg;
@@ -119,7 +120,9 @@ img {
   line-height: 35px;
   vertical-align: middle;
 }
-
+.card .show-link {
+  animation: bounce .1s alternate .5s ease;
+}
 .card .show-link .social-button {
   rotate: 0deg;
 }
@@ -127,5 +130,27 @@ img {
   rotate: 80deg;
 }
 .card .show-link .btn i {
-  rotate: 80deg;
+  rotate: 45deg;
+}
+
+.card .reverse-bounce {
+  animation: reverse-bounce .1s alternate .5s ease;
+}
+
+@keyframes bounce {
+  0% {
+    rotate: 0deg;
+  }
+  100% {
+    rotate: 2deg;
+  }
+}
+
+@keyframes reverse-bounce {
+  0% {
+    rotate: 0deg;
+  }
+  100% {
+    rotate: -2deg;
+  }
 }
